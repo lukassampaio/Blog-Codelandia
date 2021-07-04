@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Desafio 1 - Blog - Codelândia</title>
+    <script
+      src="https://kit.fontawesome.com/c23ccaaf7d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Blog - Codelândia - Desafio 1</title>
   </head>
-  <body>
+  <body data-theme="light">
     <!-- Header -->
     <header class="header-bg">
       <div class="header-container">
-        <nav>
-          <ul class="nav-list">
+        <nav class="nav-list">
+          <ul>
             <li><h1 href="#">Codelândia</h1></li>
+          </ul>
+          <ul class="nav-list-sec">
             <li><a href="#">blog</a></li>
+            <li><i class="theme far fa-moon"></i></li>
           </ul>
         </nav>
         <form class="form" action="#">
@@ -31,28 +33,30 @@
     <!-- Main -->
     <main>
       <section>
-        <article>
+        <article class="news">
           <div class="info">
             <span>02 de jul, 2021</span>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="far fa-heart like"></i>
           </div>
           <div class="contents">
-            <h2>Agora é oficial: o windows 11 está vindo</h2>
-            <p>
+            <h2 class="title">Agora é oficial: o windows 11 está vindo</h2>
+            <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis
               lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis.
             </p>
           </div>
         </article>
-        <article>
+        <article class="news">
           <div class="info">
             <span>02 de jul, 2021</span>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="far fa-heart like" aria-hidden="true"></i>
           </div>
           <div class="contents">
-            <h2 nome="Time">Tim Berners-Lee vai leiloar código-fonte da web</h2>
-            <p>
+            <h2 nome="Time" class="title">
+              Tim Berners-Lee vai leiloar código-fonte da web
+            </h2>
+            <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis
               lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis.
@@ -62,27 +66,31 @@
             </p>
           </div>
         </article>
-        <article>
+        <article class="news">
           <div class="info">
             <span>02 de jul, 2021</span>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="far fa-heart like" aria-hidden="true"></i>
           </div>
           <div class="contents">
-            <h2>Tem Firefox novo no pedaço e você vai querer migrar</h2>
-            <p>
+            <h2 class="title">
+              Tem Firefox novo no pedaço e você vai querer migrar
+            </h2>
+            <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum vestibulum auctor est.
             </p>
           </div>
         </article>
-        <article>
+        <article class="news">
           <div class="info">
             <span>02 de jul, 2021</span>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="far fa-heart like" aria-hidden="true"></i>
           </div>
           <div class="contents">
-            <h2>John McAfee, criador do antivírus McAfee, morre</h2>
-            <p>
+            <h2 class="title">
+              John McAfee, criador do antivírus McAfee, morre
+            </h2>
+            <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis
               lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis.
@@ -94,5 +102,22 @@
         </article>
       </section>
     </main>
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      const sr = ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+
+      ScrollReveal().reveal(".info", { delay: 200 });
+      ScrollReveal().reveal(".contents", { delay: 400 });
+      ScrollReveal().reveal(".title", { delay: 500 });
+      ScrollReveal().reveal(".description", { delay: 600 });
+    </script>
   </body>
 </html>
