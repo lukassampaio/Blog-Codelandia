@@ -102,6 +102,7 @@ a {
 .nav-list-sec .theme {
   font-size: 1.5625rem;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .form {
@@ -176,6 +177,7 @@ section {
 .info .like {
   font-size: 1.25rem;
   color: var(--heart);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .info .like:hover {
