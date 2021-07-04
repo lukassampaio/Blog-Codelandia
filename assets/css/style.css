@@ -1,0 +1,281 @@
+/* Fontes */
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+/* Variáveis  */
+
+:root {
+  --blue: #3ea1db;
+  --span: #b6b6b6;
+  --blue-dark: #574ae8;
+  --heart: #574ae8;
+  --white: #fff;
+  --card: #fff;
+  --text-header: #fff;
+  --background: #f3f5f7;
+
+  --title: #313131;
+  --text: #b6b6b6;
+
+  --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+}
+
+[data-theme="dark"] {
+  --blue: #3ea1db;
+  --span: #3ea1db;
+  --heart: #3ea1db;
+  --blue-dark: #574ae8;
+  --white: #fff;
+  --card: #202020;
+  --text-header: #574ae8;
+  --background: #181818;
+
+  --title: #fff;
+  --text: #e5e5e5;
+
+  --linear: #202020;
+}
+
+/* Geral */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background: var(--background);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+.header-bg {
+  max-width: 90rem;
+  margin: 0 auto;
+  height: 15.625rem;
+  background: var(--linear);
+}
+
+.header-container {
+  max-width: 56.25rem;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5625rem 0 4.5625rem 0;
+  color: var(--text-header);
+}
+
+.nav-list h1 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.nav-list-sec {
+  display: flex;
+  align-items: flex-end;
+  color: var(--text-header);
+}
+
+.nav-list-sec li a {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  color: var(--text-header);
+}
+
+.nav-list-sec .theme {
+  font-size: 1.5625rem;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  height: 4.0625rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3125rem;
+  margin: 0 0 2.5625rem 0;
+}
+
+.form a .fa-search {
+  color: #fff;
+  font-size: 1.875rem;
+  margin: 0 1.268rem;
+}
+
+.form input {
+  width: 90%;
+  height: 1.875rem;
+  background: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.form input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+/* Main */
+
+section {
+  max-width: 90rem;
+  margin: 6.25rem auto;
+}
+
+.news {
+  max-width: 56.25rem;
+  margin: 3.125rem auto;
+  height: auto;
+  background: var(--card);
+  box-shadow: 0 0 0.625rem rgba(19, 19, 31, 0.05);
+  border-radius: 0.3125rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 53.125rem;
+  padding: 1.25rem 0 0;
+  margin: 0 auto;
+}
+
+.info span {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: var(--span);
+}
+
+.info .like {
+  font-size: 1.25rem;
+  color: var(--heart);
+}
+
+.info .like:hover {
+  opacity: 50%;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  max-width: 53.125rem;
+  padding: 1.25rem 0 1.5625rem;
+  margin: 0 auto;
+}
+
+.contents .title {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--title);
+  margin: 0 0 0.5rem;
+}
+
+.contents .description {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--text);
+  text-align: left;
+}
+
+/* Barra de rolagem */
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3321ff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-dark);
+}
+
+/* Reponsive */
+
+@media only screen and (max-width: 767px) {
+  .header-container {
+    margin: 0 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    margin: 6.25rem 1.25rem;
+    /* 3.125rem */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contents {
+    margin: 0 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .info {
+    margin: 0 1.25rem;
+  }
+}
+
+/*  */
+
+@media only screen and (max-width: 930px) {
+  .header-container {
+    margin: 0 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  section {
+    margin: 6.25rem 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .contents {
+    margin: 0 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .info {
+    margin: 0 1.25rem;
+  }
+}
